@@ -52,7 +52,6 @@ namespace SigmaHW
             Console.WriteLine(Product.ReferenceEquals(milk, milk2));
             Console.WriteLine(Product.ReferenceEquals(milk2, milk2));
 
-            //Console.WriteLine($"{buy1.PriceAll}");
         }
     }
 }
