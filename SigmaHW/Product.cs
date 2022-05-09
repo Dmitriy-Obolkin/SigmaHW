@@ -9,7 +9,7 @@ namespace SigmaHW
     internal class Product
     {
         public string Name { get; private set; }
-        public double Price { get; private set; }
+        public double Price { get; private protected set; }
         public double Weight { get; private set; }
 
         public static int ID { get; private protected set; } = 0;
@@ -34,6 +34,14 @@ namespace SigmaHW
         internal virtual void SetID()
         {
             Id = 110 * 1000 + ++ID;
+        }
+
+        public virtual void ChangePrice(double percent)
+        {
+            if (percent <= 0 && percent >= 80)
+            {
+                throw new ArgumentException("Discount cannot be more than 80%");
+            }
         }
 
         public override string ToString()

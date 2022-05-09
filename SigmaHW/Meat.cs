@@ -25,6 +25,31 @@ namespace SigmaHW
             Id = 111 * 1000 + ++ID;
         }
 
+        public override void ChangePrice(double percent)
+        {
+            switch(CategoryMeat)
+            {
+                case CategoryMeat.Высший_сорт:
+                    percent += 5;
+                    break;
+                case CategoryMeat.Первый_сорт:
+                    percent += 10;
+                    break;
+                case CategoryMeat.Второй_сорт:
+                    percent += 15;
+                    break;
+            }
+            if(percent <= 0 || percent >= 80)
+            {
+                throw new ArgumentException("Discount cannot be more than 80% and less than 0");
+            }
+            else
+            {
+                Console.WriteLine($"Применена скидка {percent}%");
+                Price = Price * ((100 - percent) * 0.01);
+            }
+        }
+
         public override string ToString()
         {
             return $"{Id} \"{Name}\" {Price}грн. {Weight}кг. ({KindMeat}, {CategoryMeat})";

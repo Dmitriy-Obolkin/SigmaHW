@@ -13,7 +13,7 @@ namespace SigmaHW
 
         public DairyProducts(string name, double price, double weight, int expDate) : base(name, price, weight)
         {
-            if (expDate > 0)
+            if (expDate > 0 || expDate < 180)
                 ExpirationDate = expDate;
             else
                 throw new ArgumentException("Invalid Expiration Date!");
@@ -22,6 +22,33 @@ namespace SigmaHW
         internal override void SetID()
         {
             Id = 112 * 1000 + ++ID;
+        }
+
+        public override void ChangePrice(double percent)
+        {
+            if(ExpirationDate <= 7 )
+            {
+                percent += 25;
+            }
+            else if(ExpirationDate <= 14)
+            {
+                percent += 15;
+            }
+            else if(ExpirationDate <= 30)
+            {
+                percent += 5;
+            }
+
+            if (percent <= 0 || percent >= 80)
+            {
+                throw new ArgumentException("Discount cannot be more than 80% and less than 0");
+            }
+
+            else
+            {
+                Console.WriteLine($"Применена скидка {percent}%");
+                Price = Price * ((100 - percent) * 0.01);
+            }
         }
 
         public override string ToString()

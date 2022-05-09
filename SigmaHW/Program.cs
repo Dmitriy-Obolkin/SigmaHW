@@ -52,6 +52,15 @@ namespace SigmaHW
             Console.WriteLine(Product.ReferenceEquals(milk, milk2));
             Console.WriteLine(Product.ReferenceEquals(milk2, milk2));
 
+
+            Console.WriteLine($"Цена товара \"{fryChicken.Name}\" = {fryChicken.Price}");
+            fryChicken.ChangePrice(30);
+            Console.WriteLine($"Цена товара \"{fryChicken.Name}\" = {fryChicken.Price}\n");
+
+            Console.WriteLine($"Цена товара \"{milk4.Name}\" = {milk4.Price}");
+            milk4.ChangePrice(10);
+            Console.WriteLine($"Цена товара \"{milk4.Name}\" = {milk4.Price}");
+
         }
     }
 }
