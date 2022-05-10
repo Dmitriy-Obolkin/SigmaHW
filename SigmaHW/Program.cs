@@ -21,46 +21,56 @@ namespace SigmaHW
             buy3.Add(6, keyboard);
             buy3.Add(1, mouse, monitor, keyboard);
 
-            Check.ShowBuy(buy1);   
-            Check.ShowBuy(buy2);
-            Check.ShowBuy(buy3);
+            Product fryChicken = new Meat("Жаренная цыпа", 60, 0.3, CategoryMeat.Первый_сорт, KindMeat.Курятина);
+            Product milk = new DairyProducts("Молоко 3%", 30, 0.9, 14);
+            Product milk2 = new DairyProducts("Молоко 0%", 21, 0.9, 21);
+            Product milk3 = new DairyProducts("Молоко 1%", 26, 0.9, 16);
+            Product milk4 = new DairyProducts("Молоко 2%", 38, 0.9, 8);
+
+            #region Демонстрация
+            //Чеки
+            //Check.ShowBuy(buy1);   
+            //Check.ShowBuy(buy2);
+            //Check.ShowBuy(buy3);
+
+            //Перегруженные методы object
+            //Console.WriteLine(mouse.ToString());
+            //Console.WriteLine($"\tHashCode: {mouse.GetHashCode()}");
+            //Console.WriteLine($"{mouse.Equals(mouse)}\n");
+
+            //Console.WriteLine(fryChicken.ToString());
+            //Console.WriteLine($"\tHashCode: {fryChicken.GetHashCode()}\n");
+
+            //Console.WriteLine(milk.ToString());
+            //Console.WriteLine($"\tHashCode: {milk.GetHashCode()}\n");
+            //Console.WriteLine(milk2.ToString());
+            //Console.WriteLine($"\tHashCode: {milk2.GetHashCode()}\n");
+            //Console.WriteLine(milk3.ToString());
+            //Console.WriteLine($"\tHashCode: {milk3.GetHashCode()}\n");
+            //Console.WriteLine(milk4.ToString());
+
+            //Console.WriteLine(Product.ReferenceEquals(milk, milk2));
+            //Console.WriteLine(Product.ReferenceEquals(milk2, milk2));
+
+
+            //Скидки
+            //Console.WriteLine($"Цена товара \"{fryChicken.Name}\" = {fryChicken.Price}");
+            //fryChicken.ChangePrice(30);
+            //Console.WriteLine($"Цена товара \"{fryChicken.Name}\" = {fryChicken.Price}\n");
+
+            //Console.WriteLine($"Цена товара \"{milk4.Name}\" = {milk4.Price}");
+            //milk4.ChangePrice(10);
+            //Console.WriteLine($"Цена товара \"{milk4.Name}\" = {milk4.Price}");
+            #endregion
+
+
+            Storage.Start();
 
 
 
 
-            Meat fryChicken = new Meat("Жаренная цыпа", 60, 0.3, CategoryMeat.Первый_сорт, KindMeat.Курятина);
-            DairyProducts milk = new DairyProducts("Молоко 3%", 30, 0.9, 14);
-            DairyProducts milk2 = new DairyProducts("Молоко 0%", 21, 0.9, 21);
-            DairyProducts milk3 = new DairyProducts("Молоко 1%", 26, 0.9, 16);
-            DairyProducts milk4 = new DairyProducts("Молоко 2%", 38, 0.9, 8);
 
-            Console.WriteLine(mouse.ToString());
-            Console.WriteLine($"\tHashCode: {mouse.GetHashCode()}");
-            Console.WriteLine($"{mouse.Equals(mouse)}\n");
-            
-            Console.WriteLine(fryChicken.ToString());
-            Console.WriteLine($"\tHashCode: {fryChicken.GetHashCode()}\n");
-
-            Console.WriteLine(milk.ToString());
-            Console.WriteLine($"\tHashCode: {milk.GetHashCode()}\n");
-            Console.WriteLine(milk2.ToString());
-            Console.WriteLine($"\tHashCode: {milk2.GetHashCode()}\n");
-            Console.WriteLine(milk3.ToString());
-            Console.WriteLine($"\tHashCode: {milk3.GetHashCode()}\n");
-            Console.WriteLine(milk4.ToString());
-
-            Console.WriteLine(Product.ReferenceEquals(milk, milk2));
-            Console.WriteLine(Product.ReferenceEquals(milk2, milk2));
-
-
-            Console.WriteLine($"Цена товара \"{fryChicken.Name}\" = {fryChicken.Price}");
-            fryChicken.ChangePrice(30);
-            Console.WriteLine($"Цена товара \"{fryChicken.Name}\" = {fryChicken.Price}\n");
-
-            Console.WriteLine($"Цена товара \"{milk4.Name}\" = {milk4.Price}");
-            milk4.ChangePrice(10);
-            Console.WriteLine($"Цена товара \"{milk4.Name}\" = {milk4.Price}");
-
+            Console.ReadKey();
         }
     }
 }

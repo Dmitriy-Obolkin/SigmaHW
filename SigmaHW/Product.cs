@@ -24,18 +24,17 @@ namespace SigmaHW
                 Price = price;
                 Weight = weight;
                 SetID();
+                AddToStorage();
             }
             else
             {
                 throw new ArgumentException("Invalid args specified!");
             }
         }
-
         internal virtual void SetID()
         {
             Id = 110 * 1000 + ++ID;
         }
-
         public virtual void ChangePrice(double percent)
         {
             if (percent <= 0 && percent >= 80)
@@ -43,6 +42,14 @@ namespace SigmaHW
                 throw new ArgumentException("Discount cannot be more than 80%");
             }
         }
+
+
+
+        private void AddToStorage()
+        {
+            Storage.products[Id] = this;
+        }
+
 
         public override string ToString()
         {
@@ -58,7 +65,6 @@ namespace SigmaHW
             if (obj is Product product) return Id == product.Id;
             return false;
         }
-
         public static bool ReferenceEquals(Product lhs, Product rhs)
         {
             if (Object.ReferenceEquals(lhs, null))
