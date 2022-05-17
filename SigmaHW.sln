@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigmaHW", "SigmaHW\SigmaHW.csproj", "{C8D3FCC6-D671-4803-98F4-8AD152C6DF30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SigmaHW", "SigmaHW\SigmaHW.csproj", "{C8D3FCC6-D671-4803-98F4-8AD152C6DF30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csproj", "{BB494C3E-9D0E-40DA-A61F-E91853A0994F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C8D3FCC6-D671-4803-98F4-8AD152C6DF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8D3FCC6-D671-4803-98F4-8AD152C6DF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8D3FCC6-D671-4803-98F4-8AD152C6DF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB494C3E-9D0E-40DA-A61F-E91853A0994F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB494C3E-9D0E-40DA-A61F-E91853A0994F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB494C3E-9D0E-40DA-A61F-E91853A0994F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB494C3E-9D0E-40DA-A61F-E91853A0994F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
