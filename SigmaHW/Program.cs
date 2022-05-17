@@ -6,28 +6,30 @@ namespace SigmaHW
     {
         static void Main(string[] args)
         {
-            Product monitor = new Product("Монитор LG 24\'", 4999.90, 2.5);
-            Product keyboard = new Product("Клавиатура Logitech", 1000, 1);
-            Product mouse = new Product("Мышка A4Tech", 489.90, 0.3);
-
-            Buy buy1 = new(monitor, keyboard);
-            buy1.Add(2, monitor);
-            buy1.Add(3, keyboard);
-
-            Buy buy2 = new(keyboard);
-            buy2.Add(9, keyboard);
-
-            Buy buy3 = new(keyboard);
-            buy3.Add(6, keyboard);
-            buy3.Add(1, mouse, monitor, keyboard);
-
-            Product fryChicken = new Meat("Жаренная цыпа", 60, 0.3, CategoryMeat.Первый_сорт, KindMeat.Курятина);
-            Product milk = new DairyProducts("Молоко 3%", 30, 0.9, 14);
-            Product milk2 = new DairyProducts("Молоко 0%", 21, 0.9, 21);
-            Product milk3 = new DairyProducts("Молоко 1%", 26, 0.9, 16);
-            Product milk4 = new DairyProducts("Молоко 2%", 38, 0.9, 8);
 
             #region Демонстрация
+            //Product monitor = new Product("Монитор LG 24\'", 4999.90, 2.5);
+            //Product keyboard = new Product("Клавиатура Logitech", 1000, 1);
+            //Product mouse = new Product("Мышка A4Tech", 489.90, 0.3);
+
+            //Buy buy1 = new(monitor, keyboard);
+            //buy1.Add(2, monitor);
+            //buy1.Add(3, keyboard);
+
+            //Buy buy2 = new(keyboard);
+            //buy2.Add(9, keyboard);
+
+            //Buy buy3 = new(keyboard);
+            //buy3.Add(6, keyboard);
+            //buy3.Add(1, mouse, monitor, keyboard);
+
+            //Product fryChicken = new Meat("Жаренная цыпа1", 60, 0.3, CategoryMeat.Первый_сорт, KindMeat.Курятина);
+            //Product milk = new DairyProducts("Молоко 3%", 30, 0.9, 14);
+            //Product milk2 = new DairyProducts("Молоко 0%", 21, 0.9, 21);
+            //Product milk3 = new DairyProducts("Молоко 1%", 26, 0.9, 16);
+            //Product milk4 = new DairyProducts("Молоко 2%", 38, 0.9, 8);
+
+
             //Чеки
             //Check.ShowBuy(buy1);   
             //Check.ShowBuy(buy2);
@@ -64,11 +66,8 @@ namespace SigmaHW
             #endregion
 
 
+
             Storage.Start();
-
-
-
-
 
             Console.ReadKey();
         }

@@ -41,6 +41,11 @@ namespace SigmaHW
             {
                 throw new ArgumentException("Discount cannot be more than 80%");
             }
+            else
+            {
+                Console.WriteLine($"Применена скидка {percent}%");
+                Price = Price * ((100 - percent) * 0.01);
+            }
         }
 
 
